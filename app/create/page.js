@@ -69,6 +69,8 @@ export default function CreateReportPage() {
   };
 
   const nextStep = () => { if (step < totalSteps) setStep(step + 1); };
+  const prevStep = () => { if (step > 1) setStep(step - 1); };
+
   const handlePrint = () => {
     const originalTitle = document.title;
     const dateStr = new Date().toISOString().split('T')[0];
